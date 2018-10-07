@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Trusted News Code">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CMSC495 Group 3">
+    <title>Trusted News Source</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Trusted News Source</h1>
+
+        <div class="nav">
+            <ul id="navigation">
+                <li><a href="index.html">Home</a> &#160;&#160;</li>
+                <li><a href="data.html">Data Visualizations</a> &#160;&#160;</li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div id="content">
+
+
+    <table>
+    {% for item in items %}
+        <tr>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+
+        </tr>
+    {% endfor %}
+    </table>
+
+
+    </div>
+    <div id = "footer">Copyright &#169; 2018 CMSC495 Group3<br/>
+        <a href="mailto:borwick@umuc.edu">Email us</a>
+    </div>
+</div>
+
+
+</body>
+</html>
